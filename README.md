@@ -7,7 +7,7 @@ This is my study plan which i want to full complete after 3-4 month.
 - [ ] Algorithmic complexity / Big-O / Asymptotic analysis
 
 - [ ] Data Structures
-  - [ ] Arrays
+  - [x] Arrays
   - [ ] Linked Lists
   - [ ] Stack
   - [ ] Queue
