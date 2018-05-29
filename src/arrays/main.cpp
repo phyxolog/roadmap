@@ -55,13 +55,13 @@ void copyFrom() {
 }
 
 int calculateSum(int array[], int length) {
-	int sum = 0;
-	bool all = array[0] > 0;
-	for (int i = 0; i < length; i++) {
-		sum += all ? array[i] :
-			i % 2 != 0 ? array[i] : 0;
-	}
-	return sum;
+  int sum = 0;
+  bool all = array[0] > 0;
+  for (int i = 0; i < length; i++) {
+    sum += all ? array[i] :
+      i % 2 != 0 ? array[i] : 0;
+  }
+  return sum;
 }
 
 void doubleSum() {
@@ -75,17 +75,17 @@ void doubleSum() {
 }
 
 int getgtPaired(int array[], int length) {
-	int data[2] = { 0, array[0] };
-	for (int i = 0; i < length; i++) {
-		if (array[i] % 2 == 0) {
-			if (data[1] < array[i]) {
-				data[0] = i;
-				data[i] = array[i];
-			}
-		}
-	}
+  int data[2] = { 0, array[0] };
+  for (int i = 0; i < length; i++) {
+    if (array[i] % 2 == 0) {
+      if (data[1] < array[i]) {
+        data[0] = i;
+        data[i] = array[i];
+      }
+    }
+  }
 
-	return data[0];
+  return data[0];
 }
 
 void gtPaired() {
