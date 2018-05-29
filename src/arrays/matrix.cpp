@@ -20,7 +20,7 @@ bool check_r_c1_c2(int r, int c1, int c2, int n, int m) {
           && (c2 >= 1 && c2 <= m);
 }
 
-int **create_and_fill_matrix(int n, int m) {
+int **createAndFillMatrix(int n, int m) {
   int** matrix = new int*[n];
   for (int i = 0; i < n; i++) {
     matrix[i] = new int[m];
@@ -33,7 +33,7 @@ int **create_and_fill_matrix(int n, int m) {
   return matrix;
 }
 
-int calculate_zeros(int **matrix, int n, int m) {
+int calculateZeros(int **matrix, int n, int m) {
   int result = 0;
 
   for (int i = 0; i < n; i++) {
@@ -47,7 +47,7 @@ int calculate_zeros(int **matrix, int n, int m) {
   return result;
 }
 
-void print_matrix(int **matrix, int n, int m) {
+void printMatrix(int **matrix, int n, int m) {
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < m; j++) {
       cout << matrix[i][j] << " ";
@@ -58,7 +58,7 @@ void print_matrix(int **matrix, int n, int m) {
 
 int main(int argc, char *argv[]) {
   if (argc != 2) {
-    cout << "Wrong arguments. Usage: ./matrix[.exe] data/file_name" << endl;
+    cout << "Wrong arguments. Usage: ./matrix[.exe] file_name" << endl;
     return 1;
   }
 
@@ -85,7 +85,7 @@ int main(int argc, char *argv[]) {
     return 1;
   }
 
-  int** matrix = create_and_fill_matrix(n, m);
+  int** matrix = createAndFillMatrix(n, m);
 
   int i = 1;
   while (file >> r >> c1 >> c2) {
@@ -106,10 +106,10 @@ int main(int argc, char *argv[]) {
     i++;
   }
 
-  result = calculate_zeros(matrix, n, m);
+  result = calculateZeros(matrix, n, m);
 
   cout << endl << "Matrix:" << endl;
-  print_matrix(matrix, n, m);
+  printMatrix(matrix, n, m);
   cout << endl << "Result: " << result << endl;
 
   file.close();
