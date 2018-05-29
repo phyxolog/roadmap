@@ -89,23 +89,23 @@ int getgtPaired(int array[], int length) {
 }
 
 void gtPaired() {
-	int k;
-	
-	cout << "Enter k: ";
-	cin >> k;
+  int k;
+
+  cout << "Enter k: ";
+  cin >> k;
 
   // Now we are using pointers.
   // Closer I'll get to know them a little better.
   // And we doesn't check for overflow
   // bacause now it's overhead.
-	int *arr = new int[k];
+  int *arr = new int[k];
 
-	for (int i = 0; i < k; i++) {
-		cout << "Enter " << i + 1 << " number:";
-		cin >> arr[i];
-	}
+  for (int i = 0; i < k; i++) {
+    cout << "Enter " << i + 1 << " number:";
+    cin >> arr[i];
+  }
 
-	cout << "Gt paired: " << getgtPaired(arr, k) << endl;
+  cout << "Gt paired: " << getgtPaired(arr, k) << endl;
 }
 
 int main(int argc, char *argv[]) {
