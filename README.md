@@ -8,7 +8,7 @@ This is my study plan which i want to full complete after 3-4 month.
 
 - [ ] Data Structures
   - [x] Arrays
-  - [ ] Linked Lists
+  - [x] Linked Lists
   - [ ] Stack
   - [ ] Queue
   - [ ] Hash table
