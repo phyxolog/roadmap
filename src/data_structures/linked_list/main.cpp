@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 
 using namespace std;
 
@@ -8,32 +9,61 @@ private:
 
 public:
   Node *next;
+  Node *prev;
 
   T getValue() {
     return value;
   }
 
-  Node(T value) : value(value) {
-    next = nullptr;
-  }
-
-  Node(T value, Node *p) : value(value), next(p) {}
+  Node(T value, Node *next = nullptr, Node *prev = nullptr)
+    : value(value), next(next), prev(prev) {}
 };
 
 template <class T> class LinkedList {
 private:
   Node<T> *head;
+  Node<T> *tail;
   int size = 0;
 
 public:
-  void Add(T value) {
+  void PushBack(T value) {
     Node<T> *node = new Node<T>(value);
 
     if (node != nullptr) {
-      node->next = head;
-      head = node;
+      if (head != nullptr) {
+        tail->next = node;
+        node->prev = tail;
+        tail = node;
+      } else {
+        head = tail = node;
+      }
+
       size++;
     }
+  }
+
+  void PushFront(T value) {
+    Node<T> *node = new Node<T>(value);
+
+    if (node != nullptr) {
+      if (head != nullptr) {
+        head->prev = node;
+        node->next = head;
+        head = node;
+      } else {
+        head = tail = node;
+      }
+
+      size++;
+    }
+  }
+
+  Node<T> *getHead() {
+    return head;
+  }
+
+  Node<T> *getTail() {
+    return tail;
   }
 
   void Print() {
@@ -47,18 +77,27 @@ public:
     }
   }
 
-  void Remove() {
+  T Pop() {
     if (head != nullptr) {
+      T temp = head->getValue();
       Node<T> *n = head->next;
       delete head;
-      head = n;
       size--;
+
+      if (n != nullptr) {
+        head = n;
+        head->prev = nullptr;
+      } else {
+        head = nullptr;
+      }
+
+      return temp;
     }
   }
 
   ~LinkedList() {
     while (head != nullptr) {
-      Remove();
+      Pop();
     }
   }
 
@@ -69,19 +108,36 @@ public:
 
 int main(int argc, char *argv[]) {
   LinkedList<int> *list = new LinkedList<int>;
-  list->Add(15);
-  list->Add(21);
-  list->Add(30);
 
-  list->Remove();
+  // list->PushBack(15);
+  // list->PushBack(21);
+  // list->PushBack(30);
 
-  cout << "List size: " << list->getSize() << endl << endl;
+  // list->Pop();
 
-  list->Print();
+  // cout << list->getHead()->getValue() << endl;
 
-  list->~LinkedList();
+  // std::list<int> vec;
+  // vec.push_back(15);
+  // vec.push_back(21);
+  // vec.push_back(30);
 
-  cout << endl << "List size: " << list->getSize() << endl << endl;
+  // vec.pop_back();
+
+  // cout << vec.front() << endl;
+
+  // cout <<  << endl;
+
+
+  // cout << "List size: " << list->getSize() << endl << endl;
+
+  // list->Print();
+
+  // cout << list->getHead()->next->getValue() << endl;
+
+  // list->~LinkedList();
+
+  // cout << endl << "List size: " << list->getSize() << endl << endl;
 
   return 0;
 }
