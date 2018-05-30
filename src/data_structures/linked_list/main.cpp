@@ -29,7 +29,7 @@ public:
   void Add(T value) {
     Node<T> *node = new Node<T>(value);
 
-    if (node) {
+    if (node != nullptr) {
       node->next = head;
       head = node;
       size++;
@@ -40,7 +40,7 @@ public:
     if (head != nullptr) {
       Node<T> *n = head;
 
-      while (n) {
+      while (n != nullptr) {
         cout << n->getValue() << endl;
         n = n->next;
       }

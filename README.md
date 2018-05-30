@@ -4,8 +4,6 @@ This is my study plan which i want to full complete after 3-4 month.
 
 ## List
 
-- [ ] Algorithmic complexity / Big-O / Asymptotic analysis
-
 - [ ] Data Structures
   - [x] Arrays
   - [x] Linked Lists
@@ -44,7 +42,6 @@ This is my study plan which i want to full complete after 3-4 month.
 - [ ] More Knowledge
   - [ ] Binary search
   - [ ] Bitwise operations
-  - [ ] Pointers
 
 - [ ] Even More Knowledge
   - [ ] Recursion
