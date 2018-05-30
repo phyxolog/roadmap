@@ -47,6 +47,21 @@ public:
     }
   }
 
+  void Remove() {
+    if (head != nullptr) {
+      Node<T> *n = head->next;
+      delete head;
+      head = n;
+      size--;
+    }
+  }
+
+  ~LinkedList() {
+    while (head != nullptr) {
+      Remove();
+    }
+  }
+
   int getSize() {
     return size;
   }
@@ -58,9 +73,15 @@ int main(int argc, char *argv[]) {
   list->Add(21);
   list->Add(30);
 
+  list->Remove();
+
   cout << "List size: " << list->getSize() << endl << endl;
 
   list->Print();
+
+  list->~LinkedList();
+
+  cout << endl << "List size: " << list->getSize() << endl << endl;
 
   return 0;
 }
