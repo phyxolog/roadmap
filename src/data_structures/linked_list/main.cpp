@@ -77,7 +77,7 @@ public:
     }
   }
 
-  T Pop() {
+  T PopFront() {
     if (head != nullptr) {
       T temp = head->getValue();
       Node<T> *n = head->next;
@@ -97,7 +97,7 @@ public:
 
   ~LinkedList() {
     while (head != nullptr) {
-      Pop();
+      PopFront();
     }
   }
 
@@ -109,22 +109,22 @@ public:
 int main(int argc, char *argv[]) {
   LinkedList<int> *list = new LinkedList<int>;
 
-  // list->PushBack(15);
-  // list->PushBack(21);
-  // list->PushBack(30);
+  list->PushBack(15);
+  list->PushBack(21);
+  list->PushBack(30);
 
-  // list->Pop();
+  list->PopFront();
 
-  // cout << list->getHead()->getValue() << endl;
+  cout << list->getHead()->getValue() << endl;
 
-  // std::list<int> vec;
-  // vec.push_back(15);
-  // vec.push_back(21);
-  // vec.push_back(30);
+  std::list<int> vec;
+  vec.push_back(15);
+  vec.push_back(21);
+  vec.push_back(30);
 
-  // vec.pop_back();
+  vec.pop_front();
 
-  // cout << vec.front() << endl;
+  cout << vec.front() << endl;
 
   // cout <<  << endl;
 
