@@ -4,16 +4,16 @@ using namespace std;
 
 template <class T> class Node {
 private:
-  T *value;
+  T value;
 
 public:
   Node *next;
 
   T getValue() {
-    return *value;
+    return value;
   }
 
-  Node(T value) : value(&value) {
+  Node(T value) : value(value) {
     next = nullptr;
   }
 
