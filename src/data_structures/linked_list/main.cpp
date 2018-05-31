@@ -101,6 +101,8 @@ public:
 
       return temp;
     }
+
+    return -1;
   }
 
   T PopBack() {
@@ -120,6 +122,8 @@ public:
       
       return temp;
     }
+
+    return -1;
   }
 
   ~LinkedList() {
@@ -144,7 +148,7 @@ int main(int argc, char *argv[]) {
   cout << list->PopBack() << endl; // 30
   cout << list->PopBack() << endl; // 15
   cout << list->PopBack() << endl; // 21
-  cout << list->PopBack() << endl << endl; // 0 because now list was empty
+  cout << list->PopBack() << endl << endl; // -1 because now list was empty
 
   list->PushBack(43);
   list->PushBack(42);
