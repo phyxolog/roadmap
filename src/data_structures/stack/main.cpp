@@ -25,15 +25,8 @@ private:
 
 public:
   void push(T value) {
-    Node<T> *n = new Node<T>(value);
-
-    if (head != nullptr) {
-      n->next = head;
-      head = n;
-    } else {
-      head = n;
-    }
-
+    Node<T> *n = new Node<T>(value, head);
+    head = n;
     size++;
   }
 
