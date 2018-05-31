@@ -18,6 +18,10 @@ This is my computer science study plan which i want to full complete after 3-4 m
   - [ ] Quicksort
   - [ ] Mergesort
 
+- [ ] More Knowledge
+  - [ ] Binary search
+  - [ ] Bitwise operations
+
 - [ ] Trees
   - [ ] Trees - Notes & Background
   - [ ] Binary search trees: BSTs
@@ -38,10 +42,6 @@ This is my computer science study plan which i want to full complete after 3-4 m
   - [ ] Adjacency matrix
   - [ ] Adjacency list
   - [ ] Traversals: BFS, DFS
-
-- [ ] More Knowledge
-  - [ ] Binary search
-  - [ ] Bitwise operations
 
 - [ ] Even More Knowledge
   - [ ] Recursion
