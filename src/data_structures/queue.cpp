@@ -20,8 +20,8 @@ public:
 template <typename T>
 class Queue {
 private:
-  Node<T> *first;
-  Node<T> *last;
+  Node<T> *first = nullptr;
+  Node<T> *last = nullptr;
   unsigned int size = 0;
 
 public:

@@ -20,7 +20,7 @@ public:
 template <typename T>
 class Stack {
 private:
-  Node<T> *head;
+  Node<T> *head = nullptr;
   unsigned int size = 0;
 
 public:

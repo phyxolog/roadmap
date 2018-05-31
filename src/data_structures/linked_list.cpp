@@ -22,8 +22,8 @@ public:
 template <typename T>
 class LinkedList {
 private:
-  Node<T> *head; // pointer to first node
-  Node<T> *tail; // pointer to last node
+  Node<T> *head = nullptr; // pointer to first node
+  Node<T> *tail = nullptr; // pointer to last node
   unsigned int size = 0;
 
 public:
