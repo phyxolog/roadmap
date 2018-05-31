@@ -2,7 +2,7 @@
 
 using namespace std;
 
-template <class T>
+template <typename T>
 class Node {
 private:
   T value;
@@ -17,7 +17,7 @@ public:
   Node(T value, Node *next = nullptr) : value(value), next(next) {}
 };
 
-template <class T>
+template <typename T>
 class Stack {
 private:
   Node<T> *head;
