@@ -41,10 +41,8 @@ void copyFrom() {
   int array[SIZE] = { 5, 7, 8, 9, 5, 4, 7, 8, 4, 5, 4 },
       array2[SIZE]; // To this array we are write a number, whose index >= 3
 
-  for (int i = 0; i < SIZE; i++) {
-    if (i >= 3) {
-      array2[i - 3] = array[i];
-    }
+  for (int i = 3; i < SIZE; i++) {
+    array2[i - 3] = array[i];
   }
 
   for (int i = 0; i < SIZE - 3; i++) {
