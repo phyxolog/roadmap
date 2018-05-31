@@ -22,7 +22,7 @@ template <class T> class LinkedList {
 private:
   Node<T> *head; // pointer to first node
   Node<T> *tail; // pointer to last node
-  int size = 0;
+  unsigned int size = 0;
 
 public:
   void PushBack(T value) {
@@ -30,7 +30,7 @@ public:
     Node<T> *node = new Node<T>(value);
 
     // if memory allocated
-    if (node != nullptr) {      
+    if (node != nullptr) {
       // then check if head != null
       if (head != nullptr) {
         tail->next = node;
@@ -132,7 +132,7 @@ public:
     }
   }
 
-  int getSize() {
+  unsigned int getSize() {
     return size;
   }
 };
