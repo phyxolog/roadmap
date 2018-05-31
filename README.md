@@ -8,7 +8,7 @@ This is my computer science study plan which i want to full complete after 3-4 m
   - [x] Arrays
   - [x] Linked Lists
   - [x] Stack
-  - [ ] Queue
+  - [x] Queue
   - [ ] Hash table
 
 - [ ] Sorting
