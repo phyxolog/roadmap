@@ -136,9 +136,9 @@ public:
 int main(int argc, char *argv[]) {
   LinkedList<int> *list = new LinkedList<int>;
 
-  list->PushBack(15);
+  list->PushFront(15);
   list->PushFront(21);
-  list->PushBack(30);
+  list->PushFront(30);
 
   cout << "Pops: " << endl;
   cout << list->PopBack() << endl; // 30
