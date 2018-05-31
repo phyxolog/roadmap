@@ -1,6 +1,6 @@
 ## Way to paradise
 
-This is my study plan which i want to full complete after 3-4 month.
+This is my computer science study plan which i want to full complete after 3-4 month.
 
 ## List
 
