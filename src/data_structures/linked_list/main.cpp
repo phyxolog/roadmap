@@ -2,7 +2,8 @@
 
 using namespace std;
 
-template <class T> class Node {
+template <class T>
+class Node {
 private:
   T value;
 
@@ -18,7 +19,8 @@ public:
     : value(value), next(next), prev(prev) {}
 };
 
-template <class T> class LinkedList {
+template <class T>
+class LinkedList {
 private:
   Node<T> *head; // pointer to first node
   Node<T> *tail; // pointer to last node
