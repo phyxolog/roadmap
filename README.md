@@ -7,7 +7,7 @@ This is my computer science study plan which i want to full complete after 3-4 m
 - [ ] Data Structures
   - [x] Arrays
   - [x] Linked Lists
-  - [ ] Stack
+  - [x] Stack
   - [ ] Queue
   - [ ] Hash table
 
