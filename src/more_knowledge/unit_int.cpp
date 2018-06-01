@@ -30,8 +30,8 @@ int method2(int n) {
 int main(int argc, char *argv[]) {
   const int n = 835047;
 
-  cout << "Method 1: " << method1(n) << endl;
-  cout << "Method 2: " << method2(n) << endl;
+  cout << "Method 1: " << method1(n) << endl; // 800000
+  cout << "Method 2: " << method2(n) << endl; // 800000
 
   return 0;
 }
