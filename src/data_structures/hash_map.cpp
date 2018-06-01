@@ -3,13 +3,13 @@
 using namespace std;
 
 template<typename K, typename V>
-class HashEntry {
+class Node {
 private:
   K key;
   V value;
 
 public:
-  HashEntry(K key, V value) : key(key), value(value) {}
+  Node(K key, V value) : key(key), value(value) {}
 
   K getKey() {
     return key;
