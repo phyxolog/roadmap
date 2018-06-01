@@ -46,7 +46,7 @@ public:
       delete first;
       first = n;
 
-      size --;
+      size--;
 
       return temp;
     }
