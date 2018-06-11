@@ -51,7 +51,7 @@ public:
       return temp;
     }
 
-    return -1;
+    return T();
   }
 
   ~Queue() {
@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
   cout << queue->dequeue() << endl;                 // 6
   cout << queue->dequeue() << endl;                 // 10
   cout << queue->dequeue() << endl;                 // 8
-  cout << queue->dequeue() << endl;                 // -1 because now queue was empty
+  cout << queue->dequeue() << endl;                 // 0 because now queue was empty
 
   return 0;
 }

@@ -42,7 +42,7 @@ public:
       return temp;
     }
 
-    return -1;
+    return T();
   }
 
   T peek() {
@@ -50,7 +50,7 @@ public:
       return head->getValue();
     }
 
-    return -1;
+    return T();
   }
 
   unsigned int getSize() {
