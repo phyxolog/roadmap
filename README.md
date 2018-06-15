@@ -12,7 +12,7 @@ This is my computer science study plan which i want to full complete after 3-4 m
   - [x] Hash map
 
 - [ ] Sorting
-  - [ ] Selection
+  - [x] Selection
   - [ ] Insertion
   - [ ] Heapsort
   - [ ] Quicksort
