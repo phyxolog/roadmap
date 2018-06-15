@@ -15,7 +15,7 @@ public:
     return value;
   }
 
-  Node(T value, Node *next = nullptr, Node *prev = nullptr)
+  Node(const T &value, const Node *next = nullptr, Node *prev = nullptr)
     : value(value), next(next), prev(prev) {}
 };
 

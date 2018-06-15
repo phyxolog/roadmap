@@ -30,20 +30,22 @@ public:
   }
 };
 
+// HashMap with fixed size (128)
+// And may have only integer key
 template<typename K, typename V>
 class HashMap {
 private:
   Entry<K, V> **table;
   int size = 0;
-  int capacity = 16;
+  int tableSize = 128;
+
+  unsigned long hashFunc(K key) {
+    return key % tableSize;
+  }
 
 public:
   HashMap() {
-    table = new Entry<K, V> *[capacity]();
-  }
-
-  unsigned long hashFunc(K key) {
-    return key % capacity;
+    table = new Entry<K, V> *[tableSize]();
   }
 
   V get(const K &key) {
@@ -66,10 +68,6 @@ public:
     Entry<K, V> *prev = nullptr;
     Entry<K, V> *entry = table[hash];
 
-    if (size >= capacity) {
-      resize(capacity * 2);
-    }
-
     while (entry != nullptr && entry->getKey() != key) {
       prev = entry;
       entry = entry->next;
@@ -88,10 +86,6 @@ public:
     } else {
       entry->setValue(value);
     }
-  }
-
-  void resize(newCapacity) {
-    // TODO
   }
 
   void del(const K &key) {
@@ -120,13 +114,13 @@ public:
 int main(int argc, char *argv[]) {
   HashMap<int, string> *map = new HashMap<int, string>;
   map->put(1, "1");
-  map->put(1, "12");
-  
-  cout << map->get(1) << endl; // 12
-
+  map->put(2, "12");
+  map->put(3, "13");
   map->del(1);
-
+  
   cout << map->get(1) << endl; // null
+  cout << map->get(2) << endl; // 12
+  cout << map->get(3) << endl; // 13
 
   return 0;
 }

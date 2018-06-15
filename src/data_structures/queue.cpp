@@ -14,7 +14,8 @@ public:
     return value;
   }
 
-  Node(T value, Node *next = nullptr) : value(value), next(next) {}
+  Node(const T &value, Node *next = nullptr)
+    : value(value), next(next) {}
 };
 
 template <typename T>
