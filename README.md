@@ -4,7 +4,7 @@ This is my computer science study plan which i want to full complete after 3-4 m
 
 ## List
 
-- [ ] Data Structures
+- [x] Data Structures
   - [x] Arrays
   - [x] Linked Lists
   - [x] Stack
