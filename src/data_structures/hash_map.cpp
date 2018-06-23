@@ -9,7 +9,7 @@ private:
   V value;
 
 public:
-  Entry *next;
+  Entry * next;
   Entry(const K &key, const V &value, Entry *next = nullptr)
     : key(key), value(value), next(next) {}
 
@@ -78,12 +78,14 @@ public:
 
       if (prev == nullptr) {
         table[hash] = entry;
-      } else {
+      }
+      else {
         prev->next = entry;
       }
 
       size++;
-    } else {
+    }
+    else {
       entry->setValue(value);
     }
   }
@@ -101,7 +103,8 @@ public:
     if (entry != nullptr) {
       if (prev == nullptr) {
         table[hash] = entry->next;
-      } else {
+      }
+      else {
         prev->next = entry->next;
       }
 
@@ -117,7 +120,7 @@ int main(int argc, char *argv[]) {
   map->put(2, "12");
   map->put(3, "13");
   map->del(1);
-  
+
   cout << map->get(1) << endl; // null
   cout << map->get(2) << endl; // 12
   cout << map->get(3) << endl; // 13
