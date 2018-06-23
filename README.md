@@ -13,7 +13,7 @@ This is my computer science study plan which i want to full complete after 3-4 m
 
 - [ ] Sorting
   - [x] Selection
-  - [ ] Insertion
+  - [x] Insertion
   - [ ] Heapsort
   - [ ] Quicksort
   - [ ] Mergesort
