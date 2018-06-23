@@ -1,4 +1,4 @@
-## Way to paradise
+## Roadmap
 
 This is my computer science study plan which i want to full complete after 3-4 month.
 
