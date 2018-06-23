@@ -31,7 +31,7 @@ public:
 };
 
 // HashMap with fixed size (128)
-// And may have only integer key
+// And may have only integer type of key
 template<typename K, typename V>
 class HashMap {
 private:
